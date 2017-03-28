@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour {
 	public float speed;
-	public float speedMult;
 	private Vector2 input;
 	Rigidbody2D rbody;
 
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (input != Vector2.zero) 
 		{
-			rbody.velocity = input * ((speed * speedMult) * Time.deltaTime);
+			rbody.velocity = input * speed * Time.deltaTime;
 		} 
 		else 
 		{

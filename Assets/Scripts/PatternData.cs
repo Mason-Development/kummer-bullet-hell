@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PatternData : MonoBehaviour {
     public int bulletsInPattern;
-    public Quaternion[] rotations;
+    public float[] rotations;
     public float bulletSpeed;
+    public float destroyTime;
 
     void SelfDestruct()
     {
