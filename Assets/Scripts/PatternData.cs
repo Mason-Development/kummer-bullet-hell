@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PatternData : MonoBehaviour {
-    public int bulletsInPattern;
-    public float[] rotations;
-    public float bulletSpeed;
-    public float destroyTime;
+    public int bulletsInPattern; //How many bullets will be fired in this attack
+    public float[] rotations; //Where the turret will rotate too, edit in editor
+    public float bulletSpeed; //How fast the bullets in this attack will travel
+    public float destroyTime; //How long until the bullet is destroyed (To avoid clutter and frame drops)
 
     void SelfDestruct()
     {

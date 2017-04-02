@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour {
     public float cooldown;
     #endregion
 
+    public bool canMove;
+
     void Start () 
 	{
 		rbody = GetComponent<Rigidbody2D> ();
@@ -25,7 +27,7 @@ public class PlayerMovement : MonoBehaviour {
             cooldown -= Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && canMove)
         {
             if (cooldown <= 0)
             {
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 		input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
 
-		if (input != Vector2.zero) 
+		if (input != Vector2.zero && canMove) 
 		{
 			rbody.velocity = input * speed * Time.deltaTime;
 		} 
