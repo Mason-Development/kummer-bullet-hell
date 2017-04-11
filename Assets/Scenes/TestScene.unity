@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcef081ff9bb2c543b580ee6fe6bb1a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 20
+  timer: 300
   player: {fileID: 970018825}
 --- !u!1 &110152212
 GameObject:
@@ -456,6 +456,7 @@ MonoBehaviour:
   bulletPref: {fileID: 1839183946519512, guid: 47785cb1c1dc2aa448fcda77e17fe70e, type: 2}
   attacks:
   - {fileID: 114622726715333592, guid: 99405d087972bb74ebd77b927de2a1ce, type: 2}
+  damage: 1
   damping: 1.2
 --- !u!212 &591138666
 SpriteRenderer:
@@ -673,9 +674,11 @@ GameObject:
   m_Component:
   - component: {fileID: 970018824}
   - component: {fileID: 970018823}
+  - component: {fileID: 970018829}
   - component: {fileID: 970018826}
   - component: {fileID: 970018827}
   - component: {fileID: 970018825}
+  - component: {fileID: 970018828}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Player
@@ -780,6 +783,36 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2}
+--- !u!114 &970018828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970018822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90edea4b0d2ae924ab6c8df72e9b125e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  curHealth: 0
+--- !u!95 &970018829
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970018822}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 721963b04030f2c4ca3bb9cda563e1f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1030095702
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +859,7 @@ MonoBehaviour:
   bulletPref: {fileID: 1839183946519512, guid: 47785cb1c1dc2aa448fcda77e17fe70e, type: 2}
   attacks:
   - {fileID: 114622726715333592, guid: 99405d087972bb74ebd77b927de2a1ce, type: 2}
+  damage: 1
   damping: 1.2
 --- !u!212 &1030095705
 SpriteRenderer:
@@ -1864,6 +1898,7 @@ MonoBehaviour:
   bulletPref: {fileID: 1839183946519512, guid: 47785cb1c1dc2aa448fcda77e17fe70e, type: 2}
   attacks:
   - {fileID: 114622726715333592, guid: 99405d087972bb74ebd77b927de2a1ce, type: 2}
+  damage: 1
   damping: 1.2
 --- !u!212 &2092393567
 SpriteRenderer:

@@ -35,7 +35,9 @@ public class PlayerMovement : MonoBehaviour {
                 cooldown = 0.2f;
             }
         }
+
 		input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
+		input.Normalize ();
 
 		if (input != Vector2.zero && canMove) 
 		{

@@ -13,6 +13,7 @@ public class Turrets : MonoBehaviour {
     int curAttack; //Attacks will be run based on order of attack array, then reset one it reaches the last one
     int bulletsFired = 0;
     bool attacking; //Is the enemy attacking now?
+	public int damage; //How much Health the bullet will take from the player
     #endregion
 
     public float damping;
@@ -83,6 +84,7 @@ public class Turrets : MonoBehaviour {
     public void SpawnBullet()
     {
         bulletPref.GetComponent<BulletScript>().speed = attacks[curAttack].bulletSpeed;
+		bulletPref.GetComponent<BulletScript> ().damage = damage;
         bulletPref.GetComponent<BulletScript>().destroyTime = attacks[curAttack].destroyTime;
         Instantiate(bulletPref, transform.position, transform.rotation);
     }

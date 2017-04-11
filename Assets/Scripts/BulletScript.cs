@@ -11,6 +11,8 @@ public class BulletScript : MonoBehaviour {
     Rigidbody2D rbody;
     public float destroyTime;
 
+	public int damage;
+
 	void Start ()
     {
         rbody = GetComponent<Rigidbody2D>();
@@ -26,4 +28,5 @@ public class BulletScript : MonoBehaviour {
     {
         Destroy(gameObject);
     }
+		
 }
