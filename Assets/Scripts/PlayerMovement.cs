@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour {
 	public float speed;
-	public float speedMult;
 	private Vector2 input;
 	Rigidbody2D rbody;
 
@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject bulletPref;
     public float cooldown;
     #endregion
+
+    public bool canMove;
 
     void Start () 
 	{
@@ -25,7 +27,7 @@ public class PlayerMovement : MonoBehaviour {
             cooldown -= Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && canMove)
         {
             if (cooldown <= 0)
             {
@@ -33,11 +35,13 @@ public class PlayerMovement : MonoBehaviour {
                 cooldown = 0.2f;
             }
         }
-		input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
 
-		if (input != Vector2.zero) 
+		input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
+		input.Normalize ();
+
+		if (input != Vector2.zero && canMove) 
 		{
-			rbody.velocity = input * ((speed * speedMult) * Time.deltaTime);
+			rbody.velocity = input * speed * Time.deltaTime;
 		} 
 		else 
 		{
