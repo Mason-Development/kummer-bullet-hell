@@ -55,7 +55,7 @@ public class Turrets : MonoBehaviour {
         }
         #endregion
 
-        //Rotating Turret
+		#region Rotating Turret
         if (attacking)
         {
             if (!IsInvoking("RotateTurret"))
@@ -79,6 +79,7 @@ public class Turrets : MonoBehaviour {
                 }
             }
         }
+		#endregion
     }
 
     public void SpawnBullet()

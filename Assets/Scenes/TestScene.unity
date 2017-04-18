@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 591138664}
   - component: {fileID: 591138666}
   - component: {fileID: 591138665}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Turret (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 970018827}
   - component: {fileID: 970018825}
   - component: {fileID: 970018828}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TestPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -823,7 +823,7 @@ GameObject:
   - component: {fileID: 1030095703}
   - component: {fileID: 1030095705}
   - component: {fileID: 1030095704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Turret (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 1167873446}
   - component: {fileID: 1167873448}
   - component: {fileID: 1167873449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TestEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1891,7 +1891,7 @@ GameObject:
   - component: {fileID: 2092393565}
   - component: {fileID: 2092393567}
   - component: {fileID: 2092393566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
