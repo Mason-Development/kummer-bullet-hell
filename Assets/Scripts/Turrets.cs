@@ -12,7 +12,7 @@ public class Turrets : MonoBehaviour {
     public PatternData[] attacks;
     int curAttack; //Attacks will be run based on order of attack array, then reset one it reaches the last one
     int bulletsFired = 0;
-    bool attacking; //Is the enemy attacking now?
+    public bool attacking; //Is the enemy attacking now?
 	public int damage; //How much Health the bullet will take from the player
     #endregion
 
