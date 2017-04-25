@@ -90,7 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mType: 0
   speed: 5
-  destroyTime: 3
+  destroyTime: 5
   damage: 1
 --- !u!212 &212985458134134888
 SpriteRenderer:
